@@ -19557,13 +19557,22 @@
 
 	var tour = null;
 
-	var accounts = [
-		[i18n._('Please add a token first'), '']
-	];
-	var purchase_choices = [
-		[i18n._('Click to select'), '']
-	];
+	var lists = {
+		accounts: [
+			[i18n._('Please add a token first'), '']
+		],
+		purchase_choices: [
+			[i18n._('Click to select'), '']
+		]
+	};
 
+	var getAccounts = function getAccounts(){
+		return lists.accounts;
+	};
+
+	var getPurchaseChoices = function getPurchaseChoices(){
+		return lists.purchase_choices;
+	};
 
 	var tradeInfo = {
 		numOfRuns: 0,
@@ -19691,8 +19700,9 @@
 		toggleDebug: toggleDebug,
 		addLogToQueue: addLogToQueue,
 		isDebug: isDebug,
-		accounts: accounts,
-		purchase_choices: purchase_choices,
+		getAccounts: getAccounts,
+		lists: lists,
+		getPurchaseChoices: getPurchaseChoices,
 		disableRun: disableRun,
 		on_finish: on_finish,
 		on_strategy: on_strategy,
@@ -19786,7 +19796,7 @@
 		blockly.WidgetDiv.hideIfOwner(blockly.mainWorkspace.getBlockById('trade')
 			.getField('ACCOUNT_LIST'));
 		if (tokenList.length === 0) {
-			globals.accounts = [
+			globals.lists.accounts = [
 				[i18n._('Please add a token first'), '']
 			];
 			blockly.mainWorkspace.getBlockById('trade')
@@ -19796,9 +19806,9 @@
 				.getField('ACCOUNT_LIST')
 				.setText(i18n._('Please add a token first'));
 		} else {
-			globals.accounts = [];
+			globals.lists.accounts = [];
 			tokenList.forEach(function (tokenInfo) {
-				globals.accounts.push([tokenInfo.account_name, tokenInfo.token]);
+				globals.lists.accounts.push([tokenInfo.account_name, tokenInfo.token]);
 			});
 			var tokenInfoToAdd = tokenList[0];
 			if (tokenToAdd !== undefined) {
@@ -19834,7 +19844,7 @@
 				.getInputTargetBlock('CONDITION')
 				.type;
 			var opposites = config.opposites[condition_type.toUpperCase()];
-			globals.purchase_choices = [];
+			globals.lists.purchase_choices = [];
 			opposites.forEach(function (option, index) {
 				if (index === 0) {
 					firstOption = {
@@ -19847,7 +19857,7 @@
 						name: option[Object.keys(option)[0]],
 					};
 				}
-				globals.purchase_choices.push([option[Object.keys(option)[0]], Object.keys(option)[0]]);
+				globals.lists.purchase_choices.push([option[Object.keys(option)[0]], Object.keys(option)[0]]);
 			});
 			var purchases = [];
 			blockly.mainWorkspace.getAllBlocks()
@@ -20037,8 +20047,10 @@
 	var utils = __webpack_require__(33);
 	var storageManager = __webpack_require__(34);
 	var i18n = __webpack_require__(3);
-	var LiveApi = __webpack_require__(39).LiveApi;
-	var Chart = __webpack_require__(40).PlainChart;
+	var LiveApi = __webpack_require__(39)
+		.LiveApi;
+	var Chart = __webpack_require__(40)
+		.PlainChart;
 	var showError = utils.showError;
 	var log = utils.log;
 	var api = new LiveApi();
@@ -20097,8 +20109,10 @@
 		if (!checkBought(contractForChart)) {
 			delete chartOptions.trade;
 		}
-		if ( !chart ) {
-			chartOptions.pipSize = +(+symbolInfo.pip).toExponential().substring(3);
+		if (!chart) {
+			chartOptions.pipSize = +(+symbolInfo.pip)
+				.toExponential()
+				.substring(3);
 			chart = Chart('chart', chartOptions);
 		} else {
 			chart.updateChart(chartOptions);
@@ -20140,7 +20154,7 @@
 
 	var findToken = function findToken(token) {
 		var index = -1;
-		globals.accounts.forEach(function (tokenInfo, i) {
+		globals.lists.accounts.forEach(function (tokenInfo, i) {
 			if (tokenInfo[1] === token) {
 				index = i;
 			}
@@ -20149,14 +20163,12 @@
 	};
 
 	var removeToken = function removeToken(token) {
-		storageManager
-			.removeToken(token);
+		storageManager.removeToken(token);
 		utils.updateTokenList();
 	};
 
 	var logout = function logout() {
-		storageManager
-			.removeAllTokens();
+		storageManager.removeAllTokens();
 		utils.updateTokenList();
 		log(i18n._('Logged you out!'), 'info');
 	};
@@ -20174,8 +20186,7 @@
 			api.authorize(token)
 				.then(function (response) {
 					api.disconnect();
-					storageManager
-						.addToken(token, response.authorize.loginid);
+					storageManager.addToken(token, response.authorize.loginid);
 					utils.updateTokenList(token);
 					log(i18n._('Your token was added successfully'), 'info');
 				}, function (reason) {
@@ -20211,7 +20222,7 @@
 				epoch: +feed.tick.epoch,
 				quote: +feed.tick.quote,
 			});
-			if ( !contractForChart ) {
+			if (!contractForChart) {
 				updateChart();
 			}
 			callStrategy();
@@ -20388,18 +20399,19 @@
 		}
 	};
 
-	var requestSymbolInfo = function requestSymbolInfo(callback){
-		api.getActiveSymbolsBrief().then(function(response){
-			var symbols = response.active_symbols;
-			symbols.forEach(function(_symbolInfo){
-				if ( _symbolInfo.symbol === symbol ) {
-					symbolInfo = _symbolInfo;
-					if ( callback ) {
-						callback();
+	var requestSymbolInfo = function requestSymbolInfo(callback) {
+		api.getActiveSymbolsBrief()
+			.then(function (response) {
+				var symbols = response.active_symbols;
+				symbols.forEach(function (_symbolInfo) {
+					if (_symbolInfo.symbol === symbol) {
+						symbolInfo = _symbolInfo;
+						if (callback) {
+							callback();
+						}
 					}
-				}
+				});
 			});
-		});
 	};
 
 	var setSymbol = function setSymbol(_symbol) {
@@ -25620,7 +25632,8 @@
 	var globals = __webpack_require__(31);
 	var storageManager = __webpack_require__(34);
 	var blockly = __webpack_require__(32);
-	var saveAs = __webpack_require__(74).saveAs;
+	var saveAs = __webpack_require__(74)
+		.saveAs;
 	__webpack_require__(77);
 	__webpack_require__(95);
 	__webpack_require__(114);
@@ -25690,8 +25703,7 @@
 					var xml = blockly.Xml.textToDom(e.target.result);
 					blockly.Xml.domToWorkspace(xml, blockly.mainWorkspace);
 					utils.addPurchaseOptions();
-					var tokenList = storageManager
-						.getTokenList();
+					var tokenList = storageManager.getTokenList();
 					if (tokenList.length !== 0) {
 						blockly.mainWorkspace.getBlockById('trade')
 							.getField('ACCOUNT_LIST')
@@ -26624,7 +26636,7 @@
 		init: function () {
 			this.appendDummyInput()
 				.appendField(i18n._("Trade With Account:"))
-				.appendField(new blockly.FieldDropdown(globals.accounts), "ACCOUNT_LIST");
+				.appendField(new blockly.FieldDropdown(globals.getAccounts), "ACCOUNT_LIST");
 			this.appendStatementInput("SUBMARKET")
 				.setCheck("Submarket")
 				.appendField(i18n._("Submarket"));
@@ -26959,7 +26971,7 @@
 		init: function() {
 			this.appendDummyInput()
 				.appendField(i18n._("Purchase"))
-				.appendField(new blockly.FieldDropdown(globals.purchase_choices), "PURCHASE_LIST");
+				.appendField(new blockly.FieldDropdown(globals.getPurchaseChoices), "PURCHASE_LIST");
 			this.setPreviousStatement(true, 'Purchase');
 			this.setColour(180);
 			this.setTooltip(i18n._('Purchases a chosen contract. Accepts index to choose between the contracts.'));
