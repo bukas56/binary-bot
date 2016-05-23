@@ -47,10 +47,13 @@
 	var translator = __webpack_require__(1); // must be on top
 	var i18n = __webpack_require__(3);
 	var $ = __webpack_require__(2);
-	translator.Translator(function(){
-		$('[data-i18n-text]').each(function(){
-			$(this).text(i18n._($(this).attr('data-i18n-text')));
-		});
+	translator.Translator(function () {
+		$('[data-i18n-text]')
+			.each(function () {
+				$(this)
+					.text(i18n._($(this)
+						.attr('data-i18n-text')));
+			});
 	});
 
 
@@ -66,52 +69,55 @@
 		var str = window.location.search;
 		var objURL = {};
 		str.replace(
-			new RegExp( "([^?=&]+)(=([^&]*))?", "g" ),
-			function( $0, $1, $2, $3 ){
-				objURL[ $1 ] = $3;
+			new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+			function ($0, $1, $2, $3) {
+				objURL[$1] = $3;
 			}
 		);
 		return objURL;
 	};
-	$('#language').change(function change(e){
-		localStorage.lang = e.target.value;
-		window.location.search = '?l=' + e.target.value;
-	});
+	$('#language')
+		.change(function change(e) {
+			localStorage.lang = e.target.value;
+			window.location.search = '?l=' + e.target.value;
+		});
 	var queryStr = parseQueryString();
-	if ( queryStr.hasOwnProperty('l') && queryStr.l !== '' && supportedLanguages.indexOf(queryStr.l) >= 0 ) {
+	if (queryStr.hasOwnProperty('l') && queryStr.l !== '' && supportedLanguages.indexOf(queryStr.l) >= 0) {
 		window.lang = queryStr.l;
 		localStorage.lang = queryStr.l;
-	} else if (localStorage.lang){
+	} else if (localStorage.lang) {
 		window.lang = localStorage.lang;
 	} else {
 		window.lang = 'en';
 	}
-	$('#language').val(window.lang);
+	$('#language')
+		.val(window.lang);
 	// end of handling language
 
 	module.exports = {
-		addBlocklyTranslation: function addBlocklyTranslation(){
+		addBlocklyTranslation: function addBlocklyTranslation() {
 			// to include script tag in html without warning
-			$.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+			$.ajaxPrefilter(function (options, originalOptions, jqXHR) {
 				options.async = true;
 			});
 
-			var script = document.createElement( 'script' );
+			var script = document.createElement('script');
 			script.type = 'text/javascript';
 			var blocklyLang;
-			if ( lang === 'zh_tw' ) {
+			if (lang === 'zh_tw') {
 				blocklyLang = 'zh-hant';
-			} else if ( lang === 'zh_cn' ) {
+			} else if (lang === 'zh_cn') {
 				blocklyLang = 'zh-hans';
 			} else {
 				blocklyLang = lang;
 			}
-			script.src = 'www/js/blockly/msg/js/' + blocklyLang + '.js';
-			$('body').append(script);
+			script.src = 'js/blockly/msg/js/' + blocklyLang + '.js';
+			$('body')
+				.append(script);
 		},
-		Translator: function Translator(callback){
+		Translator: function Translator(callback) {
 			// load the language file (this should not be called en)
-			$.get('www/i18n/' + lang + '.json', function(translation) {
+			$.get('i18n/' + lang + '.json', function (translation) {
 				var resources = {
 					en: {
 						translation: translation
@@ -127,7 +133,7 @@
 						'translation'
 					],
 					resources: resources
-				}, function() {
+				}, function () {
 					callback();
 				});
 			});
@@ -140,7 +146,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	 * jQuery JavaScript Library v2.2.3
+	 * jQuery JavaScript Library v2.2.4
 	 * http://jquery.com/
 	 *
 	 * Includes Sizzle.js
@@ -150,7 +156,7 @@
 	 * Released under the MIT license
 	 * http://jquery.org/license
 	 *
-	 * Date: 2016-04-05T19:26Z
+	 * Date: 2016-05-20T17:23Z
 	 */
 
 	(function( global, factory ) {
@@ -206,7 +212,7 @@
 
 
 	var
-		version = "2.2.3",
+		version = "2.2.4",
 
 		// Define a local copy of jQuery
 		jQuery = function( selector, context ) {
@@ -5147,13 +5153,14 @@
 		isDefaultPrevented: returnFalse,
 		isPropagationStopped: returnFalse,
 		isImmediatePropagationStopped: returnFalse,
+		isSimulated: false,
 
 		preventDefault: function() {
 			var e = this.originalEvent;
 
 			this.isDefaultPrevented = returnTrue;
 
-			if ( e ) {
+			if ( e && !this.isSimulated ) {
 				e.preventDefault();
 			}
 		},
@@ -5162,7 +5169,7 @@
 
 			this.isPropagationStopped = returnTrue;
 
-			if ( e ) {
+			if ( e && !this.isSimulated ) {
 				e.stopPropagation();
 			}
 		},
@@ -5171,7 +5178,7 @@
 
 			this.isImmediatePropagationStopped = returnTrue;
 
-			if ( e ) {
+			if ( e && !this.isSimulated ) {
 				e.stopImmediatePropagation();
 			}
 
@@ -6101,19 +6108,6 @@
 			val = name === "width" ? elem.offsetWidth : elem.offsetHeight,
 			styles = getStyles( elem ),
 			isBorderBox = jQuery.css( elem, "boxSizing", false, styles ) === "border-box";
-
-		// Support: IE11 only
-		// In IE 11 fullscreen elements inside of an iframe have
-		// 100x too small dimensions (gh-1764).
-		if ( document.msFullscreenElement && window.top !== window ) {
-
-			// Support: IE11 only
-			// Running getBoundingClientRect on a disconnected node
-			// in IE throws an error.
-			if ( elem.getClientRects().length ) {
-				val = Math.round( elem.getBoundingClientRect()[ name ] * 100 );
-			}
-		}
 
 		// Some non-html elements return undefined for offsetWidth, so check for null/undefined
 		// svg - https://bugzilla.mozilla.org/show_bug.cgi?id=649285
@@ -8005,6 +7999,7 @@
 		},
 
 		// Piggyback on a donor event to simulate a different one
+		// Used only for `focus(in | out)` events
 		simulate: function( type, elem, event ) {
 			var e = jQuery.extend(
 				new jQuery.Event(),
@@ -8012,27 +8007,10 @@
 				{
 					type: type,
 					isSimulated: true
-
-					// Previously, `originalEvent: {}` was set here, so stopPropagation call
-					// would not be triggered on donor event, since in our own
-					// jQuery.event.stopPropagation function we had a check for existence of
-					// originalEvent.stopPropagation method, so, consequently it would be a noop.
-					//
-					// But now, this "simulate" function is used only for events
-					// for which stopPropagation() is noop, so there is no need for that anymore.
-					//
-					// For the 1.x branch though, guard for "click" and "submit"
-					// events is still used, but was moved to jQuery.event.stopPropagation function
-					// because `originalEvent` should point to the original event for the constancy
-					// with other events and for more focused logic
 				}
 			);
 
 			jQuery.event.trigger( e, null, elem );
-
-			if ( e.isDefaultPrevented() ) {
-				event.preventDefault();
-			}
 		}
 
 	} );
@@ -9992,7 +9970,7 @@
 
 	var init = function init(options, callback) {
 		translation = options.resources[options.lng][options.defaultNS];
-		if ( callback ) {
+		if (callback) {
 			callback();
 		}
 	};
