@@ -1,4 +1,4 @@
-var globals = require('../globals/globals');
+var globals = require('globals');
 
 var getUTCTime = function getUTCTime(date) {
 	var dateObject = new Date(date);

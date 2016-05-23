@@ -7,8 +7,8 @@ var activeTutorial = null;
 var tours = {}; // e
 
 var initTours = function initTours() {
-	tours.introduction = require('../tours/introduction');
-	tours.welcome = require('../tours/welcome');
+	tours.introduction = require('introduction');
+	tours.welcome = require('welcome');
 	tours.welcome.welcome();
 };
 
