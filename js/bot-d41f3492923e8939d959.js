@@ -13799,7 +13799,7 @@
 	var utils = __webpack_require__(11);
 	
 	var AppId = {
-		app_id: ( document.location.port === '8080' ) ? 1168 : 1169,
+		app_id: ( document.location.port === '8080' ) ? 1168 : ( ( document.location.hostname.indexOf('github.io') >= 0 ) ? 1180 : 1169 ),
 		redirectOauth: function oauthLogin(){
 			document.location = 'https://oauth.binary.com/oauth2/authorize?app_id=' + this.app_id + '&l=' + window.lang.toUpperCase();
 		},
@@ -13813,7 +13813,7 @@
 			});
 			if (tokenList.length) {
 				utils.addAllTokens(tokenList, function(){
-					document.location.pathname = '/bot.html';
+					document.location.pathname += ((document.location.pathname.slice(-1) === '/')?'':'/') + 'bot.html';
 				});
 			} else {
 				if (done) {
@@ -13824,7 +13824,7 @@
 		removeTokenFromUrl: function removeTokenFromUrl(){
 			var queryStr = utils.parseQueryString();
 			if (queryStr.token1) {
-				document.location.search = '';
+				document.location.href = document.location.href.split('?')[0];
 			}
 		},
 		getAppId: function getAppId(){
@@ -28806,23 +28806,56 @@
 	var i18n = __webpack_require__(3);
 	
 	var isConditionAllowedInSymbol = function isConditionAllowedInSymbol(symbol, condition) {
-		var allowedConditions = getAllowedConditions(symbol);
+		var allowedConditions = getAllowedConditions(symbol).conditions;
 		return allowedConditions.indexOf(condition) >= 0;
+	};
+	
+	var getFirstObjectValue = function getFirstObjectValue(obj) {
+		return obj[Object.keys(obj)[0]];
+	};
+	
+	var getConditionName = function getConditionName(condition) {
+		var opposites = config.opposites[condition.toUpperCase()];
+		return getFirstObjectValue(opposites[0]) + '/' + getFirstObjectValue(opposites[1]);
+	};
+	
+	var getCategory = function getCategory(condition) {
+		for( var category in config.conditionsCategory ) {
+			if ( config.conditionsCategory[category].indexOf(condition.toLowerCase()) >= 0 ) {
+				return category;
+			}
+		}
+	};
+	
+	var getCategoryName = function getCategoryName(condition) {
+		return config.conditionsCategoryName[getCategory(condition)];
+	};
+	
+	var getAllowedCategoryNames = function getAllowedCategoryNames(symbol) {
+		var allowedCategories = getAllowedConditions(symbol).categories;
+		return allowedCategories.map(function(el){
+			return config.conditionsCategoryName[el];
+		});
 	};
 	
 	var getAllowedConditions = function getAllowedConditions(symbol) {
 		var allowedConditions = [];
+		var allowedCategories = [];
 		globals.assetIndex.forEach(function(assetIndex){
 			if (assetIndex[0].toLowerCase() === symbol.toLowerCase()) {
 				assetIndex[2].forEach(function(conditionInfo){
 					var conditionName = conditionInfo[0];
 					if ( config.conditionsCategory.hasOwnProperty(conditionName) ) {
 						allowedConditions = allowedConditions.concat(config.conditionsCategory[conditionName]);
+						allowedCategories.push(conditionName);
 					}
 				});
 			}
 		});
-		return allowedConditions;
+		return {
+			conditions: allowedConditions,
+			categories: allowedCategories
+		};
 	};
 	
 	var findSymbol = function findSymbol(symbol) {
@@ -29118,7 +29151,10 @@
 		xmlToStr: xmlToStr,
 		findSymbol: findSymbol,
 		getAssetIndex: getAssetIndex,
-		isConditionAllowedInSymbol: isConditionAllowedInSymbol
+		isConditionAllowedInSymbol: isConditionAllowedInSymbol,
+		getAllowedCategoryNames: getAllowedCategoryNames,
+		getCategoryName: getCategoryName,
+		getConditionName: getConditionName
 	};
 
 
@@ -29323,19 +29359,19 @@
 				[i18n._('Loss'), 'loss'],
 			],
 			CHECK_DIRECTION: [
-				[i18n._('Up'), 'up'],
-				[i18n._('Down'), 'down'],
+				[i18n._('Rise'), 'rise'],
+				[i18n._('Fall'), 'fall'],
 				[i18n._('No Change'), ''],
 			],
 		},
 	
 		opposites: {
-			UPDOWN: [{
-				'CALL': i18n._('Up')
+			RISEFALL: [{
+				'CALL': i18n._('Rise')
 			}, {
-				'PUT': i18n._('Down')
+				'PUT': i18n._('Fall')
 			}],
-			ASIAN: [{
+			ASIANS: [{
 				'ASIANU': i18n._('Asian Up')
 			}, {
 				'ASIAND': i18n._('Asian Down')
@@ -29356,17 +29392,21 @@
 				'DIGITUNDER': i18n._('Under')
 			}],
 		},
-	
 		opposites_have_barrier: [
 			'MATCHESDIFFERS',
 			'OVERUNDER',
 		],
 		conditionsCategory: {
-			callput: ['updown'],
-			asian: ['asian'],
+			callput: ['risefall'],
+			asian: ['asians'],
 			digits: ['matchesdiffers', 'evenodd', 'overunder']
 		},
-		conditions: ['updown', 'asian', 'matchesdiffers', 'evenodd', 'overunder'],
+		conditionsCategoryName: {
+			callput: i18n._('Up/Down'),
+			asian: i18n._('Asians'),
+			digits: i18n._('Digits'),
+		},
+		conditions: ['risefall', 'asians', 'matchesdiffers', 'evenodd', 'overunder'],
 	};
 
 
@@ -31074,7 +31114,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var globals = __webpack_require__(22);
-	var version = '1.1.9';
+	var version = '1.2.0';
 	if (globals.debug) {
 		console.log('%cBinary Bot (v' + version + ') started.', 'color: green');
 	} else {
@@ -31196,10 +31236,10 @@
 			if (ticks.length > 1) {
 				if (+ticks.slice(-1)[0].quote > +ticks.slice(-2)
 					.quote) {
-					direction = 'up';
+					direction = 'rise';
 				} else if (+ticks.slice(-1)[0].quote < +ticks.slice(-2)
 					.quote) {
-					direction = 'down';
+					direction = 'fall';
 				}
 			}
 			globals.on_strategy(+ticks.slice(-1)[0].quote, direction);
@@ -31495,7 +31535,13 @@
 	var initTours = function initTours() {
 		tours.introduction = __webpack_require__(34).init();
 		tours.welcome = __webpack_require__(35).init();
-		tours.welcome.welcome();
+		if ( tours.welcome.welcome() ){
+			activeTutorial = tours.welcome;
+			$('#tutorialButton')
+				.unbind('click.startTutorial')
+				.bind('click.stopTutorial', stopTutorial)
+				.text(i18n._('Stop!'));
+		}
 	};
 	
 	var uiComponents = {
@@ -31534,10 +31580,8 @@
 			.val()];
 		activeTutorial.start();
 		$('#tutorialButton')
-			.unbind('click', startTutorial);
-		$('#tutorialButton')
-			.bind('click', stopTutorial);
-		$('#tutorialButton')
+			.unbind('click.startTutorial')
+			.bind('click.stopTutorial', stopTutorial)
 			.text(i18n._('Stop!'));
 	};
 	
@@ -31552,10 +31596,8 @@
 			activeTutorial = null;
 		}
 		$('#tutorialButton')
-			.unbind('click', stopTutorial);
-		$('#tutorialButton')
-			.bind('click', startTutorial);
-		$('#tutorialButton')
+			.unbind('click.stopTutorial')
+			.bind('click.startTutorial', startTutorial)
 			.text(i18n._('Go!'));
 	};
 	
@@ -31752,7 +31794,7 @@
 			.addEventListener('change', handleFileSelect, false);
 	
 		$('#tutorialButton')
-			.bind('click', startTutorial);
+			.bind('click.startTutorial', startTutorial);
 		$('#stopButton')
 			.text(i18n._('Reset'));
 		$('#stopButton')
@@ -32801,8 +32843,10 @@
 					started = true;
 					globals.tour = tour;
 					globals.tour.start();
+					return true;
 				}
 			}
+			return false;
 		},
 		stop: function stop() {
 			view.setOpacityForAll(true, 1);
@@ -33234,7 +33278,9 @@
 				_condition.unplug();
 			} else if ( !botUtils.isConditionAllowedInSymbol(_condition.parentBlock_.type, _condition.type) ){
 				var symbol = botUtils.findSymbol(_condition.parentBlock_.type);
-				botUtils.log(symbol[Object.keys(symbol)[0]] + ' ' + i18n._('does not support this condition'), 'warning');
+				botUtils.log(symbol[Object.keys(symbol)[0]] + ' ' + i18n._('does not support category:') + 
+					' ' + botUtils.getCategoryName(_condition.type) +
+					', ' + i18n._('Allowed categories are') + ' ' + botUtils.getAllowedCategoryNames(_condition.parentBlock_.type), 'warning');
 				_condition.unplug();
 			} else {
 				botUtils.broadcast('tour:condition');
@@ -33375,10 +33421,11 @@
 /* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#abpy8a
+	// https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#zr2375
 	var blockly = __webpack_require__(13);
 	var i18n = __webpack_require__(3);
 	var globals = __webpack_require__(22);
+	var botUtils = __webpack_require__(21);
 	var relationChecker = __webpack_require__(56);
 	var symbolNames = globals.activeSymbols.getSymbolNames();
 	Object.keys(symbolNames).forEach(function(symbol){
@@ -33386,9 +33433,11 @@
 			init: function() {
 				this.appendDummyInput()
 					.appendField(symbolNames[symbol]);
+				this.appendDummyInput()
+					.appendField(i18n._('Accepts') + ': (' + botUtils.getAllowedCategoryNames(symbol) + ')');
 				this.appendStatementInput("CONDITION")
 					.setCheck("Condition");
-				this.setInputsInline(true);
+				this.setInputsInline(false);
 				this.setPreviousStatement(true, "Submarket");
 				this.setColour(345);
 				this.setTooltip(i18n._('Chooses the symbol:') + ' ' + symbolNames[symbol]);
@@ -33670,7 +33719,7 @@
 /* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#cur8so
+	// https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#zuc7w9
 	var blockly = __webpack_require__(13);
 	var i18n = __webpack_require__(3);
 	var config = __webpack_require__(23);
@@ -33682,13 +33731,15 @@
 			init: function() {
 				var option_names = [];
 				config.opposites[opposites].forEach(function(options){
-					
 					var option_alias = Object.keys(options)[0];
 					var option_name = options[option_alias];
 					option_names.push(option_name);	
 				});
 				this.appendDummyInput()
-					.appendField(option_names[0] + '/' + option_names[1]);
+					.setAlign(Blockly.ALIGN_CENTRE)
+					.appendField(utils.getCategoryName(opposites));
+				this.appendDummyInput()
+					.appendField('> ' + option_names[0] + '/' + option_names[1]);
 				this.appendValueInput("DURATION")
 					.setCheck("Number")
 					.appendField(i18n._("Ticks:"));
@@ -37913,4 +37964,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bot-1257b21f0f2b1829540b.map
+//# sourceMappingURL=bot-d41f3492923e8939d959.map
