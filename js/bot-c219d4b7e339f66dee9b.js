@@ -14008,7 +14008,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -14212,7 +14222,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -14416,7 +14436,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -14620,7 +14650,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -14824,7 +14864,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -15028,7 +15078,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -15232,7 +15292,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -15436,7 +15506,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -15640,7 +15720,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -15844,7 +15934,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -16048,7 +16148,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -16252,7 +16362,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -16456,7 +16576,17 @@
 		"ffb465875e1ff2b49bcaa7c6b70965ffe39fa59d": "Returns the total profit",
 		"a6d6a2783600f06699eae5d3f81b919e444e4e58": "Trade With Account:",
 		"5465174048929828b0cc34f2291e93a2e0ea782c": "Submarket",
-		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts."
+		"f9319cd2e3dca2de438eb9565eb196e2dc8f04e0": "The trade block that logs in to the binary API and makes the contracts defined by submarket blocks. Accepts index to choose between the accounts.",
+		"608061fb5aab975013fa70c5c814a1d8ba30c152": "Trade More Efficiently Than You Ever Thought Possible",
+		"e4ce8dc3e416e69262ba642dc57d3975d6616980": "Interested in automating your preferred strategies for trading binary options?",
+		"f261237ca8beec6f77b76c4121feb8da22818c56": "Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function.",
+		"f6c85c68616eeaaa15fcd53fdc52f6eb5c886357": "Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep.",
+		"e6906a0d1c28b202f9bd49da4a6abbddca57399a": "Best of all, once you’ve built a bot, we can help you sell it to fellow traders in the",
+		"1dd0cf79c572bcdbdfabbd54ee95710a21234d73": "Binary.com Shop",
+		"abeef9a35ae6256796ba2462e4f64d308de42359": "Receive 80% of the sales revenue from every purchase of your bot in our app store.",
+		"0606f0b7763ee6e8094a3dab7873d34c08fd3670": "Begin Building a Bot Now",
+		"221acaf3a0290adafe08cdcb8c66121c73d8b4a3": "Need further assistance?",
+		"4832e45812a2724f16a15f9ae87adfc8ae4168cf": "Contact us"
 	};
 
 /***/ },
@@ -29272,4 +29402,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bot-a44bc31b984a221e0fa0.map
+//# sourceMappingURL=bot-c219d4b7e339f66dee9b.map
